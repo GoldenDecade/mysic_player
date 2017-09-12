@@ -1,0 +1,23 @@
+//声明变量
+@color: #beffa2;
+//mixin 函数
+.border(@borderWidth: 2px){
+  border: @borderWidth solid @color;
+}
+
+.common_style {
+  margin-top: 100px - 30px;
+  width: 400px - 100px;
+  height: 100px;
+  color: @color;
+}
+
+#box {
+  .common_style; // 继承公共样式
+  .border();  // 使用函数
+}
+
+#container {
+  .common_style;
+  .border(1px);
+}

@@ -1,0 +1,16 @@
+.common_style,
+#box,
+#container {
+  margin-top: 70px;
+  width: 80%;
+  height: 100px;
+  color: #beffa2;
+}
+#box {
+  border: 2px solid #beffa2;
+}
+#container {
+  background: url("./logo.png") no-repeat;
+  background-size: 100% 100%;
+  border: 1px solid #beffa2;
+}

@@ -1,0 +1,23 @@
+//声明变量
+$color: #beffa2;
+//mixin函数
+@mixin border($borderWidth: 2px){
+  border: $borderWidth solid $color;
+}
+// 加减可以使用px以及百分比，但是乘除的结果都是百分比，需要注意
+.common_style {
+  margin-top: 100px - 30px;
+  width: 600px / 960px * 100%;
+  height: 100px;
+  color: $color;
+}
+
+#box {
+  @extend .common_style; // 继承公共样式
+  @include border();  // 使用函数
+}
+
+#container {
+  @extend .common_style;
+  @include border(1px);
+}

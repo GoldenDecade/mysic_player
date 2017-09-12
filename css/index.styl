@@ -1,0 +1,24 @@
+//声明变量
+color = #beffa2
+//mixin函数
+border(borderWidth=2px){
+  border: borderWidth solid color;
+}
+
+.common_style
+  margin-top 100px - 30px
+  width 100%- 20%
+  height 100px
+  color color
+
+
+#box
+  @extend .common_style // 继承公共样式
+  border()  // 使用函数
+
+
+#container
+  @extend .common_style
+  background url('./logo.png') no-repeat
+  background-size 100% 100%
+  border(1px)

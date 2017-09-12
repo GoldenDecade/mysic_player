@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'icon';
+  src: url("./fonts/turn-arrow.svg");
+  src: url("./fonts/turn-arrow.ttf");
+  src: url("./fonts/turn-arrow.eot");
+  src: url("./fonts/turn-arrow.woff");
+}
+.arrow::after {
+  content: '\e600';
+  display: block;
+  font-family: icon;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased /*为了在mac本上面，字体显示的更清晰设置的，消除字体边缘的锯齿*/;
+  -moz-osx-font-smoothing: grayscale;
+}

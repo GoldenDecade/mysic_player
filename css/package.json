@@ -1,0 +1,29 @@
+{
+  "name": "learn_sass_less_stylus",
+  "version": "1.0.0",
+  "description": "学习 sass less stylus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "less",
+    "sass",
+    "stylus"
+  ],
+  "author": "wq",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "file-loader": "^0.11.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^3.5.6"
+  }
+}
