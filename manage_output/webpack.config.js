@@ -6,21 +6,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')  //  自动生成html�
 const CleanWebpackPlugin = require('clean-webpack-plugin') // 打包之后清理目录的插件
 module.exports = {
     devtool: 'inline-source-map',
-    devServer: { // 需要先 cnpm install --save-dev webpack-dev-server
+    /*devServer: { // 需要先 cnpm install --save-dev webpack-dev-server
         contentBase: './dist'  //  将dist目录下的文件，作为可访问文件
-    },
+    },*/
     entry:{
-        index : './src/index.js', // app对应的是output中filename中的name
-        print : './src/print.js'
+        index : './src/index.js' // app对应的是output中filename中的name
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         // filename: 'bundle.js',
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: '/'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: path.resolve(__dirname, 'index.html'),
+            // filename: path.resolve(__dirname, 'index.html'),  这里引起的问题  指输出的文件名字及路径
             title: 'Output Management'
         }),
         new CleanWebpackPlugin(['dist'], {
