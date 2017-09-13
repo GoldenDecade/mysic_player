@@ -3,6 +3,7 @@
  */
 // import * as print from './print.js'
 // console.log(print.default.name)
+// import './index.css'
 console.log(143)
 import print from './print.js'
 

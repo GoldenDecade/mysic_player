@@ -18,6 +18,13 @@ module.exports = {
         contentBase: './dist',
         hot: true    //  在使用热替换的时候才加
     },
+    module: [
+        {
+            test: /^.css$/,
+            use: ['style-loader', 'css-loader']
+            // loader: 'style-loader!css-loader'
+        }
+    ],
     plugins: [
         new HtmlWebpackPlugin({
             title: 'HMR'
