@@ -4,6 +4,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')  //  自动生成html的插件
 const CleanWebpackPlugin = require('clean-webpack-plugin') // 打包之后清理目录的插件
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin') //  能够删除未引用代码的压缩工具
 module.exports = {
     devtool: 'inline-source-map',
     /*devServer: { // 需要先 cnpm install --save-dev webpack-dev-server
@@ -25,6 +26,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(['dist'], {
             root: ''//  默认是webpack.config.js所在的目录
-        })
+        }),
+        new UglifyJSPlugin()
     ]
 }
