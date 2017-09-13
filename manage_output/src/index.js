@@ -3,7 +3,7 @@
  */
 // import * as print from './print.js'
 // console.log(print.default.name)
-console.log(12)
+console.log(123)
 import {print} from './print.js'
 
 print()
