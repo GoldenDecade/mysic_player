@@ -15,16 +15,19 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     devServer: {
+        inline: true,
         contentBase: './dist',
-        hot: true    //  在使用热替换的时候才加
+        hot: true,    //  在使用热替换的时候才加
+        port: 3000
     },
-    module: [
-        {
-            test: /^.css$/,
-            use: ['style-loader', 'css-loader']
-            // loader: 'style-loader!css-loader'
-        }
-    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'HMR'
