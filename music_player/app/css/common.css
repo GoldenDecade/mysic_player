@@ -1,0 +1,35 @@
+@charset "UTF-8";
+* {
+  webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  -webkit-text-size-adjust: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:focus,
+a:hover,
+a:visited,
+a:actived {
+  text-decoration: none;
+  outline: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  clear: both;
+}
